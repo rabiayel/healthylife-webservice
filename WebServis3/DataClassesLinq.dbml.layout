@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.25" name="DataClassesLinq">
+  <DataContextMoniker Name="/DataClassesLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f9d48e76-f4fb-4a5e-be4a-5cac695d4873" absoluteBounds="6.375, 7.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClassesLinqDataContext/AcilMudahale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0841c5b3-452a-486f-837b-5be9e679296d" absoluteBounds="6.39, 7.5850000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72a4e642-5387-4981-9934-848bdf1398be" absoluteBounds="3.625, 1.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesLinqDataContext/alerji" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52f80806-833c-475e-9745-85b02a389e9b" absoluteBounds="3.64, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a19ce1b-445d-4be5-95c3-bf89f1e14c8e" absoluteBounds="3.625, 8.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesLinqDataContext/applogin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2dbe992-3004-4351-ae94-10a1badd8161" absoluteBounds="3.64, 8.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98eb3e26-9701-4134-ac34-5426ad30a434" absoluteBounds="3.625, 3.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesLinqDataContext/hastalik" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f0d01c9-344b-496c-adde-51450764b0ef" absoluteBounds="3.64, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d8b20056-317c-4b21-89d7-5ce7629965e3" absoluteBounds="3.625, 6, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesLinqDataContext/ilac" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b2dff2b-3dd6-458b-92ec-047830ab1628" absoluteBounds="3.64, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d33320a-18b8-4a52-8402-e09b24a50633" absoluteBounds="3.25, 10.5, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/DataClassesLinqDataContext/iletisim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f78097fd-0098-4353-ad26-86654dd3ef63" absoluteBounds="3.265, 10.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="49c0cd08-d155-4e35-a5d9-1c37c52311c6" absoluteBounds="0.875, 6.375, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClassesLinqDataContext/Kimlik" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91bc92b6-fd92-493d-8b40-f527d7bacad3" absoluteBounds="0.89, 6.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 8.51044840494792); (6.375 : 8.51044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesLinqDataContext/applogin/applogin_AcilMudahale" />
+      <nodes>
+        <classShapeMoniker Id="4a19ce1b-445d-4be5-95c3-bf89f1e14c8e" />
+        <classShapeMoniker Id="f9d48e76-f4fb-4a5e-be4a-5cac695d4873" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 7.75564697265625); (6.375 : 7.75564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesLinqDataContext/Kimlik/Kimlik_AcilMudahale" />
+      <nodes>
+        <classShapeMoniker Id="49c0cd08-d155-4e35-a5d9-1c37c52311c6" />
+        <classShapeMoniker Id="f9d48e76-f4fb-4a5e-be4a-5cac695d4873" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.875 : 6.375); (1.875 : 2.44314697265625); (3.625 : 2.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesLinqDataContext/Kimlik/Kimlik_alerji" />
+      <nodes>
+        <classShapeMoniker Id="49c0cd08-d155-4e35-a5d9-1c37c52311c6" />
+        <classShapeMoniker Id="72a4e642-5387-4981-9934-848bdf1398be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 8.32774983723958); (3.625 : 8.32774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesLinqDataContext/Kimlik/Kimlik_applogin" />
+      <nodes>
+        <classShapeMoniker Id="49c0cd08-d155-4e35-a5d9-1c37c52311c6" />
+        <classShapeMoniker Id="4a19ce1b-445d-4be5-95c3-bf89f1e14c8e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.4062525 : 6.375); (2.4062525 : 4.56814697265625); (3.625 : 4.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesLinqDataContext/Kimlik/Kimlik_hastalik" />
+      <nodes>
+        <classShapeMoniker Id="49c0cd08-d155-4e35-a5d9-1c37c52311c6" />
+        <classShapeMoniker Id="98eb3e26-9701-4134-ac34-5426ad30a434" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 6.88064697265625); (3.625 : 6.88064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesLinqDataContext/Kimlik/Kimlik_ilac" />
+      <nodes>
+        <classShapeMoniker Id="49c0cd08-d155-4e35-a5d9-1c37c52311c6" />
+        <classShapeMoniker Id="d8b20056-317c-4b21-89d7-5ce7629965e3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.875 : 8.53049967447917); (1.875 : 11.7700512695313); (3.25 : 11.7700512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesLinqDataContext/Kimlik/Kimlik_iletisim" />
+      <nodes>
+        <classShapeMoniker Id="49c0cd08-d155-4e35-a5d9-1c37c52311c6" />
+        <classShapeMoniker Id="6d33320a-18b8-4a52-8402-e09b24a50633" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

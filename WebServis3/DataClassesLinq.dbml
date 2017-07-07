@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="healthylife2" Class="DataClassesLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=healthylife2;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="healthylife2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AcilMudahale" Member="AcilMudahales">
+    <Type Name="AcilMudahale">
+      <Column Name="acilid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="kimlikid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="personelid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tarih" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="aciklama" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="applogin_AcilMudahale" Member="applogin" ThisKey="personelid" OtherKey="apploginid" Type="applogin" IsForeignKey="true" />
+      <Association Name="Kimlik_AcilMudahale" Member="Kimlik" ThisKey="kimlikid" OtherKey="kimlikid" Type="Kimlik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.alerji" Member="alerjis">
+    <Type Name="alerji">
+      <Column Name="alerjid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="alerjiad" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="kimlikid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Kimlik_alerji" Member="Kimlik" ThisKey="kimlikid" OtherKey="kimlikid" Type="Kimlik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.applogin" Member="applogins">
+    <Type Name="applogin">
+      <Column Name="apploginid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="kimlikid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="yetki" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sifre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="applogin_AcilMudahale" Member="AcilMudahales" ThisKey="apploginid" OtherKey="personelid" Type="AcilMudahale" />
+      <Association Name="Kimlik_applogin" Member="Kimlik" ThisKey="kimlikid" OtherKey="kimlikid" Type="Kimlik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hastalik" Member="hastaliks">
+    <Type Name="hastalik">
+      <Column Name="hastalikid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hastalikad" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="kimlikid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Kimlik_hastalik" Member="Kimlik" ThisKey="kimlikid" OtherKey="kimlikid" Type="Kimlik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ilac" Member="ilacs">
+    <Type Name="ilac">
+      <Column Name="ilacid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ilacad" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="kimlikid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Kimlik_ilac" Member="Kimlik" ThisKey="kimlikid" OtherKey="kimlikid" Type="Kimlik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.iletisim" Member="iletisims">
+    <Type Name="iletisim">
+      <Column Name="iletisimid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="kimlikid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="yakinad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="yakinsoyad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="yakintel" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="yakinderece" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="adres" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Kimlik_iletisim" Member="Kimlik" ThisKey="kimlikid" OtherKey="kimlikid" Type="Kimlik" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kimlik" Member="Kimliks">
+    <Type Name="Kimlik">
+      <Column Name="kimlikid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tcno" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="soyad" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="dtarih" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sehir" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="kangrubu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Kimlik_AcilMudahale" Member="AcilMudahales" ThisKey="kimlikid" OtherKey="kimlikid" Type="AcilMudahale" />
+      <Association Name="Kimlik_alerji" Member="alerjis" ThisKey="kimlikid" OtherKey="kimlikid" Type="alerji" />
+      <Association Name="Kimlik_applogin" Member="applogins" ThisKey="kimlikid" OtherKey="kimlikid" Type="applogin" />
+      <Association Name="Kimlik_hastalik" Member="hastaliks" ThisKey="kimlikid" OtherKey="kimlikid" Type="hastalik" />
+      <Association Name="Kimlik_ilac" Member="ilacs" ThisKey="kimlikid" OtherKey="kimlikid" Type="ilac" />
+      <Association Name="Kimlik_iletisim" Member="iletisims" ThisKey="kimlikid" OtherKey="kimlikid" Type="iletisim" />
+    </Type>
+  </Table>
+</Database>
